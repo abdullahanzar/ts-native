@@ -1,0 +1,23 @@
+# Rust
+/target/
+**/*.rs.bk
+Cargo.lock
+
+# LLVM and native build artifacts
+**/*.ll
+**/*.bc
+**/*.o
+**/*.obj
+**/*.s
+**/*.a
+**/*.so
+**/*.dylib
+**/*.dll
+
+# IDE/editor
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db

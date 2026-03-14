@@ -1,0 +1,18 @@
+[package]
+name = "ts-native-codegen"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+thiserror.workspace = true
+ts-native-ir = { path = "../ts-native-ir" }
+inkwell = { version = "0.6", default-features = false, optional = true }
+
+[features]
+default = []
+llvm = ["dep:inkwell", "inkwell/llvm10-0"]
+
+[lints]
+workspace = true
