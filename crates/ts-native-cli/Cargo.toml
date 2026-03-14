@@ -1,0 +1,16 @@
+[package]
+name = "ts-native-cli"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+clap.workspace = true
+ts-native-parser = { path = "../ts-native-parser" }
+ts-native-types = { path = "../ts-native-types" }
+ts-native-ir = { path = "../ts-native-ir" }
+ts-native-codegen = { path = "../ts-native-codegen" }
+
+[lints]
+workspace = true

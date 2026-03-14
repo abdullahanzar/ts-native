@@ -1,0 +1,4 @@
+export {};
+
+let x: int = 1;
+x = 3.5;
