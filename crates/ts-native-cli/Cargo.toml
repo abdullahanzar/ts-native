@@ -12,5 +12,9 @@ ts-native-types = { path = "../ts-native-types" }
 ts-native-ir = { path = "../ts-native-ir" }
 ts-native-codegen = { path = "../ts-native-codegen" }
 
+[features]
+default = []
+llvm = ["ts-native-codegen/llvm"]
+
 [lints]
 workspace = true

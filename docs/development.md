@@ -28,12 +28,17 @@ This repository targets Linux/macOS development with Rust stable and LLVM instal
 - `tests/fixtures/`: pass/fail fixture sets for integration testing
 
 ## LLVM Integration
-The `ts-native-codegen` crate uses an optional `inkwell` dependency gated by feature `llvm`.
+Textual LLVM IR emission via `tsn --emit llvm-ir` works in the default build and does not require a local LLVM toolchain.
+
+Host-native artifact emission uses an optional `inkwell` dependency gated by feature `llvm`, plus the host C toolchain for linking.
 
 Enable it with:
 
 ```bash
 cargo check -p ts-native-codegen --features llvm
+cargo test -p ts-native-codegen --features llvm
+cargo test -p ts-native-cli --features llvm
+cargo run -p ts-native-cli --features llvm -- examples/fibonacci.ts --emit native --output /tmp/fibonacci
 ```
 
-If `llvm-config` is not installed or points to an unsupported version, LLVM-enabled checks will fail.
+If `llvm-config` is not installed, points to an unsupported version, or the host linker (`cc`) is unavailable, LLVM-enabled native emission checks will fail.

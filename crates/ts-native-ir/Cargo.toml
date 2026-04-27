@@ -7,6 +7,7 @@ rust-version.workspace = true
 
 [dependencies]
 thiserror.workspace = true
+ts-native-parser = { path = "../ts-native-parser" }
 ts-native-types = { path = "../ts-native-types" }
 
 [lints]

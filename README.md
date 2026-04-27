@@ -48,11 +48,26 @@ scripts/
 ./scripts/lint.sh
 ```
 
+## Distribution Build
+
+Build and stage an LLVM-enabled Linux amd64 compiler binary with:
+
+```bash
+make dist
+```
+
+Smoke-test that staged compiler by compiling and running the basic example with:
+
+```bash
+make smoke
+```
+
 ## Documentation
 - Specification index: `docs/specification/README.md`
 - v0 chapters: `docs/specification/v0/README.md`
 - Architecture: `docs/architecture.md`
 - Development setup: `docs/development.md`
+- Completion tracker: `docs/completion-status.md`
 
 ## Contributing
 See `CONTRIBUTING.md` for development workflow and contribution guidelines.

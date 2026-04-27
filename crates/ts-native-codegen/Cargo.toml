@@ -10,6 +10,10 @@ thiserror.workspace = true
 ts-native-ir = { path = "../ts-native-ir" }
 inkwell = { version = "0.6", default-features = false, optional = true }
 
+[dev-dependencies]
+ts-native-parser = { path = "../ts-native-parser" }
+ts-native-types = { path = "../ts-native-types" }
+
 [features]
 default = []
 llvm = ["dep:inkwell", "inkwell/llvm10-0"]
